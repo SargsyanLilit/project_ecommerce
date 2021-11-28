@@ -39,7 +39,7 @@
    <!-- body -->
    <body class="main-layout">
 	<!-- header section start -->
-	<div class="header_section">
+	<div class="header_section header_main">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3">
@@ -52,9 +52,9 @@
                         </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                           <a class="nav-item nav-link" href="index.html">Home</a>
+                           <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
                            <a class="nav-item nav-link" href="#">Men</a>
-                           <a class="nav-item nav-link" href="#">Women</a>
+                           <a class="nav-item nav-link" href="{% url 'women' %}">Women</a>
                            <a class="nav-item nav-link" href="#">Kids</a>
 <!--                           <a class="nav-item nav-link" href="contact.html">Contact</a>-->
                            <a class="nav-item nav-link last" href="#"><img src="{% static 'products/images/search_icon.png' %}"></a>
@@ -68,7 +68,9 @@
 
 	<!-- header section end -->
 
+
+	</body>
 	{% block content %}
 	{% endblock content %}
-	</body>
+
 </html>
