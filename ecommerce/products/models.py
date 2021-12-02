@@ -2,6 +2,7 @@ from django.db import models
 import csv
 import json
 
+
 # Create your models here.
 
 # for csv file
@@ -52,7 +53,8 @@ class Products(models.Model):
                     variation_1_thumbnail=row[16],
                     variation_1_image=row[17],
                     image_url=row[18],
-                    )
+                )
+
 
 # Uncomment, when data upload from csv to db is needed, then runserver
 
@@ -62,7 +64,6 @@ class Products(models.Model):
 
 # for path in csv_paths:
 #     Products.from_csv(path)
-
 
 
 # for json file
@@ -76,6 +77,7 @@ class Product(models.Model):
     description = models.TextField(max_length=1000)
     images = models.TextField(max_length=1000)
     gender = models.CharField(max_length=10)
+    quantity = models.IntegerField(default=50)
 
     @classmethod
     def from_json(cls, json_path):
@@ -93,5 +95,7 @@ class Product(models.Model):
                     gender=product["gender"],
                 )
 
+
 # Uncomment, when data upload from json to db is needed, then runserver
 # Product.from_json("products/static/products/json/dataset.json")
+

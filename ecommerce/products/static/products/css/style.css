@@ -294,6 +294,15 @@ button {
 	font-size: 16pt;
  }
 
+ .add_to_bag_bt{
+	width: 32%;
+	height: 50px;
+	color: #ffffff;
+	background-color: #ff4e5b;
+	color: #ffffff;
+	font-size: 16pt;
+ }
+
  .more_bt{
 	width: 32%;
 	height: 50px;
@@ -528,7 +537,7 @@ body{
 .gallery_section{
 	width: 100%;
 	float: left;
-	background-color: #dedede;
+	background-color: #ffffff;
 	height: auto;
 
 }
@@ -536,7 +545,28 @@ body{
 .best_shoes {
     width: 100%;
     float: left;
-    background-color: #ffffff;
+    background-color: #e9e9e9;
+    height: auto;
+    padding: 20px 20px 20px 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.best_shoes {
+    width: 100%;
+    float: left;
+    background-color: #e9e9e9;
+    height: auto;
+    padding: 20px 20px 20px 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.product_details {
+    width: 150%;
+    float: left;
+    background-color: #e9e9e9;
     height: auto;
     padding: 20px 20px 20px 0px;
     margin-top: 15px;
@@ -551,6 +581,17 @@ body{
 	text-align: center;
     margin-left: 0px;
 }
+
+.brand_name{
+	width: 100%;
+	float: left;
+	font-size: 14pt;
+	color: #000;
+	text-align: center;
+    margin-left: 0px;
+    font-weight: bold;
+}
+
 .shoes_icon{
 	width: 100%;
 	float: left;
