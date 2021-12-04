@@ -77,7 +77,17 @@ class Product(models.Model):
     description = models.TextField(max_length=1000)
     images = models.TextField(max_length=1000)
     gender = models.CharField(max_length=10)
-    quantity = models.IntegerField(default=50)
+    quantity = models.IntegerField()
+    price_usd = models.FloatField()
+    # for price_usd and quantity , this SQL codes in db
+    # ALTER TABLE products_product
+    # ADD quantity AS (CASE
+    #                  WHEN in_stock = "True" then 50
+    #                  ELSE 0
+    #                  END);
+    # ALTER TABLE products_product
+    # ADD price_usd as (round((price*0.013), 2));
+
 
     @classmethod
     def from_json(cls, json_path):
@@ -98,4 +108,6 @@ class Product(models.Model):
 
 # Uncomment, when data upload from json to db is needed, then runserver
 # Product.from_json("products/static/products/json/dataset.json")
+
+
 
